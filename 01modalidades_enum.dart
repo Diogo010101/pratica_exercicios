@@ -8,36 +8,8 @@ void main() {
       "4 - Atletismo");
   String? inputCodModalidade = stdin.readLineSync();
   int codModalidade = int.parse(inputCodModalidade!);
-
-  String escolha;
-  if (codModalidade == 1) {
-    escolherModalidadeEnum(Modalidades.futebol);
-    Modalidades modalidade = Modalidades.futebol;
-    print(modalidade);
-
-  } else if (codModalidade == 2) {
-    Modalidades modalidade = Modalidades.ginastica;
-    print(modalidade);
-    escolherModalidadeEnum(Modalidades.ginastica);
-
-  } else if (codModalidade == 3) {
-    Modalidades modalidade = Modalidades.natacao;
-    print(modalidade);
-    escolherModalidadeEnum(Modalidades.natacao);
-    
-  } else if (codModalidade == 4) {
-    escolherModalidadeEnum(Modalidades.atletismo);
-    Modalidades modalidade = Modalidades.atletismo;
-    print(modalidade);
-    escolha = "Atletismo";
-
-  } else {
-    print("Opção inválida");
-    escolha = "Opção Inválida";
-  }
-
+  digitarModalidade(codModalidade: codModalidade);
 }
-
 
 enum Modalidades { futebol, ginastica, natacao, atletismo }
 
@@ -57,5 +29,27 @@ void escolherModalidadeEnum(Modalidades escolha) {
       break;
     default:
       print("Opção inválida");
+  }
+}
+
+void digitarModalidade({required int codModalidade}) {
+  if (codModalidade == 1) {
+    escolherModalidadeEnum(Modalidades.futebol);
+    Modalidades modalidade = Modalidades.futebol;
+    print(modalidade);
+  } else if (codModalidade == 2) {
+    Modalidades modalidade = Modalidades.ginastica;
+    print(modalidade);
+    escolherModalidadeEnum(Modalidades.ginastica);
+  } else if (codModalidade == 3) {
+    Modalidades modalidade = Modalidades.natacao;
+    print(modalidade);
+    escolherModalidadeEnum(Modalidades.natacao);
+  } else if (codModalidade == 4) {
+    escolherModalidadeEnum(Modalidades.atletismo);
+    Modalidades modalidade = Modalidades.atletismo;
+    print(modalidade);
+  } else {
+    print("Opção inválida");
   }
 }
