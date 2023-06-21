@@ -1,5 +1,5 @@
 void main() {
-  escolherConsoleEnum(Console.na);
+  escolherConsoleEnum(Console.nintendo64);
 }
 
 enum Console {
